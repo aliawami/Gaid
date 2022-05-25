@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		79D1EC0B283EE8E10041C2F7 /* GaidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC0A283EE8E10041C2F7 /* GaidApp.swift */; };
+		79D1EC0D283EE8E10041C2F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC0C283EE8E10041C2F7 /* ContentView.swift */; };
+		79D1EC0F283EE8EB0041C2F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D1EC0E283EE8EB0041C2F7 /* Assets.xcassets */; };
+		79D1EC12283EE8EC0041C2F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D1EC11283EE8EC0041C2F7 /* Preview Assets.xcassets */; };
+		79D1EC14283EE8EC0041C2F7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC13283EE8EC0041C2F7 /* Persistence.swift */; };
+		79D1EC17283EE8EC0041C2F7 /* Gaid.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC15283EE8EC0041C2F7 /* Gaid.xcdatamodeld */; };
+		79D1EC21283EE8EC0041C2F7 /* GaidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC20283EE8EC0041C2F7 /* GaidTests.swift */; };
+		79D1EC2B283EE8EC0041C2F7 /* GaidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC2A283EE8EC0041C2F7 /* GaidUITests.swift */; };
+		79D1EC2D283EE8EC0041C2F7 /* GaidUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC2C283EE8EC0041C2F7 /* GaidUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		79D1EC1D283EE8EC0041C2F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79D1EBFF283EE8E10041C2F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79D1EC06283EE8E10041C2F7;
+			remoteInfo = Gaid;
+		};
+		79D1EC27283EE8EC0041C2F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 79D1EBFF283EE8E10041C2F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79D1EC06283EE8E10041C2F7;
+			remoteInfo = Gaid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		79D1EC07283EE8E10041C2F7 /* Gaid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gaid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D1EC0A283EE8E10041C2F7 /* GaidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaidApp.swift; sourceTree = "<group>"; };
+		79D1EC0C283EE8E10041C2F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		79D1EC0E283EE8EB0041C2F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79D1EC11283EE8EC0041C2F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		79D1EC13283EE8EC0041C2F7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		79D1EC16283EE8EC0041C2F7 /* Gaid.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gaid.xcdatamodel; sourceTree = "<group>"; };
+		79D1EC1C283EE8EC0041C2F7 /* GaidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D1EC20283EE8EC0041C2F7 /* GaidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaidTests.swift; sourceTree = "<group>"; };
+		79D1EC26283EE8EC0041C2F7 /* GaidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79D1EC2A283EE8EC0041C2F7 /* GaidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaidUITests.swift; sourceTree = "<group>"; };
+		79D1EC2C283EE8EC0041C2F7 /* GaidUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaidUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79D1EC04283EE8E10041C2F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1EC19283EE8EC0041C2F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1EC23283EE8EC0041C2F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79D1EBFE283EE8E10041C2F7 = {
+			isa = PBXGroup;
+			children = (
+				79D1EC09283EE8E10041C2F7 /* Gaid */,
+				79D1EC1F283EE8EC0041C2F7 /* GaidTests */,
+				79D1EC29283EE8EC0041C2F7 /* GaidUITests */,
+				79D1EC08283EE8E10041C2F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		79D1EC08283EE8E10041C2F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79D1EC07283EE8E10041C2F7 /* Gaid.app */,
+				79D1EC1C283EE8EC0041C2F7 /* GaidTests.xctest */,
+				79D1EC26283EE8EC0041C2F7 /* GaidUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79D1EC09283EE8E10041C2F7 /* Gaid */ = {
+			isa = PBXGroup;
+			children = (
+				79D1EC0A283EE8E10041C2F7 /* GaidApp.swift */,
+				79D1EC0C283EE8E10041C2F7 /* ContentView.swift */,
+				79D1EC0E283EE8EB0041C2F7 /* Assets.xcassets */,
+				79D1EC13283EE8EC0041C2F7 /* Persistence.swift */,
+				79D1EC15283EE8EC0041C2F7 /* Gaid.xcdatamodeld */,
+				79D1EC10283EE8EC0041C2F7 /* Preview Content */,
+			);
+			path = Gaid;
+			sourceTree = "<group>";
+		};
+		79D1EC10283EE8EC0041C2F7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				79D1EC11283EE8EC0041C2F7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		79D1EC1F283EE8EC0041C2F7 /* GaidTests */ = {
+			isa = PBXGroup;
+			children = (
+				79D1EC20283EE8EC0041C2F7 /* GaidTests.swift */,
+			);
+			path = GaidTests;
+			sourceTree = "<group>";
+		};
+		79D1EC29283EE8EC0041C2F7 /* GaidUITests */ = {
+			isa = PBXGroup;
+			children = (
+				79D1EC2A283EE8EC0041C2F7 /* GaidUITests.swift */,
+				79D1EC2C283EE8EC0041C2F7 /* GaidUITestsLaunchTests.swift */,
+			);
+			path = GaidUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79D1EC06283EE8E10041C2F7 /* Gaid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79D1EC30283EE8EC0041C2F7 /* Build configuration list for PBXNativeTarget "Gaid" */;
+			buildPhases = (
+				79D1EC03283EE8E10041C2F7 /* Sources */,
+				79D1EC04283EE8E10041C2F7 /* Frameworks */,
+				79D1EC05283EE8E10041C2F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gaid;
+			productName = Gaid;
+			productReference = 79D1EC07283EE8E10041C2F7 /* Gaid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		79D1EC1B283EE8EC0041C2F7 /* GaidTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79D1EC33283EE8EC0041C2F7 /* Build configuration list for PBXNativeTarget "GaidTests" */;
+			buildPhases = (
+				79D1EC18283EE8EC0041C2F7 /* Sources */,
+				79D1EC19283EE8EC0041C2F7 /* Frameworks */,
+				79D1EC1A283EE8EC0041C2F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79D1EC1E283EE8EC0041C2F7 /* PBXTargetDependency */,
+			);
+			name = GaidTests;
+			productName = GaidTests;
+			productReference = 79D1EC1C283EE8EC0041C2F7 /* GaidTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		79D1EC25283EE8EC0041C2F7 /* GaidUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79D1EC36283EE8EC0041C2F7 /* Build configuration list for PBXNativeTarget "GaidUITests" */;
+			buildPhases = (
+				79D1EC22283EE8EC0041C2F7 /* Sources */,
+				79D1EC23283EE8EC0041C2F7 /* Frameworks */,
+				79D1EC24283EE8EC0041C2F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79D1EC28283EE8EC0041C2F7 /* PBXTargetDependency */,
+			);
+			name = GaidUITests;
+			productName = GaidUITests;
+			productReference = 79D1EC26283EE8EC0041C2F7 /* GaidUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79D1EBFF283EE8E10041C2F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					79D1EC06283EE8E10041C2F7 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					79D1EC1B283EE8EC0041C2F7 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 79D1EC06283EE8E10041C2F7;
+					};
+					79D1EC25283EE8EC0041C2F7 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 79D1EC06283EE8E10041C2F7;
+					};
+				};
+			};
+			buildConfigurationList = 79D1EC02283EE8E10041C2F7 /* Build configuration list for PBXProject "Gaid" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 79D1EBFE283EE8E10041C2F7;
+			productRefGroup = 79D1EC08283EE8E10041C2F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79D1EC06283EE8E10041C2F7 /* Gaid */,
+				79D1EC1B283EE8EC0041C2F7 /* GaidTests */,
+				79D1EC25283EE8EC0041C2F7 /* GaidUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79D1EC05283EE8E10041C2F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D1EC12283EE8EC0041C2F7 /* Preview Assets.xcassets in Resources */,
+				79D1EC0F283EE8EB0041C2F7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1EC1A283EE8EC0041C2F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1EC24283EE8EC0041C2F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79D1EC03283EE8E10041C2F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D1EC14283EE8EC0041C2F7 /* Persistence.swift in Sources */,
+				79D1EC0D283EE8E10041C2F7 /* ContentView.swift in Sources */,
+				79D1EC17283EE8EC0041C2F7 /* Gaid.xcdatamodeld in Sources */,
+				79D1EC0B283EE8E10041C2F7 /* GaidApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1EC18283EE8EC0041C2F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D1EC21283EE8EC0041C2F7 /* GaidTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79D1EC22283EE8EC0041C2F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79D1EC2B283EE8EC0041C2F7 /* GaidUITests.swift in Sources */,
+				79D1EC2D283EE8EC0041C2F7 /* GaidUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79D1EC1E283EE8EC0041C2F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79D1EC06283EE8E10041C2F7 /* Gaid */;
+			targetProxy = 79D1EC1D283EE8EC0041C2F7 /* PBXContainerItemProxy */;
+		};
+		79D1EC28283EE8EC0041C2F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79D1EC06283EE8E10041C2F7 /* Gaid */;
+			targetProxy = 79D1EC27283EE8EC0041C2F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		79D1EC2E283EE8EC0041C2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		79D1EC2F283EE8EC0041C2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79D1EC31283EE8EC0041C2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Gaid/Preview Content\"";
+				DEVELOPMENT_TEAM = FHBJTCA4K5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alisaeedalawami.Gaid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79D1EC32283EE8EC0041C2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Gaid/Preview Content\"";
+				DEVELOPMENT_TEAM = FHBJTCA4K5;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alisaeedalawami.Gaid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		79D1EC34283EE8EC0041C2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FHBJTCA4K5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alisaeedalawami.GaidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gaid.app/Gaid";
+			};
+			name = Debug;
+		};
+		79D1EC35283EE8EC0041C2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FHBJTCA4K5;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alisaeedalawami.GaidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gaid.app/Gaid";
+			};
+			name = Release;
+		};
+		79D1EC37283EE8EC0041C2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FHBJTCA4K5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alisaeedalawami.GaidUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gaid;
+			};
+			name = Debug;
+		};
+		79D1EC38283EE8EC0041C2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FHBJTCA4K5;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alisaeedalawami.GaidUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gaid;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79D1EC02283EE8E10041C2F7 /* Build configuration list for PBXProject "Gaid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D1EC2E283EE8EC0041C2F7 /* Debug */,
+				79D1EC2F283EE8EC0041C2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79D1EC30283EE8EC0041C2F7 /* Build configuration list for PBXNativeTarget "Gaid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D1EC31283EE8EC0041C2F7 /* Debug */,
+				79D1EC32283EE8EC0041C2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79D1EC33283EE8EC0041C2F7 /* Build configuration list for PBXNativeTarget "GaidTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D1EC34283EE8EC0041C2F7 /* Debug */,
+				79D1EC35283EE8EC0041C2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79D1EC36283EE8EC0041C2F7 /* Build configuration list for PBXNativeTarget "GaidUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79D1EC37283EE8EC0041C2F7 /* Debug */,
+				79D1EC38283EE8EC0041C2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		79D1EC15283EE8EC0041C2F7 /* Gaid.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				79D1EC16283EE8EC0041C2F7 /* Gaid.xcdatamodel */,
+			);
+			currentVersion = 79D1EC16283EE8EC0041C2F7 /* Gaid.xcdatamodel */;
+			path = Gaid.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 79D1EBFF283EE8E10041C2F7 /* Project object */;
+}
