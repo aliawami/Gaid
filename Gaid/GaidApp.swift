@@ -9,12 +9,16 @@ import SwiftUI
 
 @main
 struct GaidApp: App {
-    let persistenceController = PersistenceController.shared
+//    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            NavigationView {
+                StartingGameView()
+            }
+//            RegisterPlayerView(gameBoard: GameBoard(id: 1, gameName: GameNames.Tarnib))
+//            ContentView()
+//                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

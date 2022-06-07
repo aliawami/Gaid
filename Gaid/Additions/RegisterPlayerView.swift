@@ -19,28 +19,38 @@ struct RegisterPlayerView: View {
     @State var name2 = String()
     @State var name3 = String()
     @State var name4 = String()
+//    @State var namesV = [CustomTextView]()
     
     
-    init(gameBoard:GameBoard){
-        self.gameBoard = gameBoard
-    
-        
-        
-        gameBoard.namingPlayers(names: ["Ahmed", "Ali", "Jassim", "Hassan"], groupsNames: [])
-//        gameBoard.startShuffler(id: 1)
-
-    }
+//    init(gameBoard:GameBoard){
+//        self.gameBoard = gameBoard
+//    
+////        namesV = Array.init(repeating: CustomTextView(placeHolder: "Player View"), count: 4)
+//        
+//        
+//        gameBoard.namingPlayers(names: ["Ahmed", "Ali", "Jassim", "Hassan"], groupsNames: [])
+////        gameBoard.startShuffler(id: 1)
+//
+//    }
     var body: some View {
         VStack{
+//            ForEach(Array(namesV.enumerated()), id:\.0){_, item in
+//                AnyView(item)
+//
+//            }
+            
 //            List(1 ..< 4) { player in
                 VStack {
                     
                     TextField(LocalizedStringKey("Player Name"), text: $name1)
                         .padding()
+                    Divider()
                     TextField(LocalizedStringKey("Player Name"), text: $name2)
                         .padding()
+                    Divider()
                     TextField(LocalizedStringKey("Player Name"), text: $name3)
                         .padding()
+                    Divider()
                     TextField(LocalizedStringKey("Player Name"), text: $name4)
                         .padding()
                   
@@ -52,6 +62,7 @@ struct RegisterPlayerView: View {
                     RoundedRectangle(cornerRadius: 8)
                         .stroke( Color.black)
             )
+                .padding(.horizontal)
                 
 //            }
 
@@ -70,7 +81,9 @@ struct CustomTextView: View{
     @State var text:String = ""
     var placeHolder:String
     var body: some View {
-        TextField(LocalizedStringKey(placeHolder), text: $text)
+        VStack {
+            TextField(LocalizedStringKey(placeHolder), text: $text)
+        }
     }
     
 }

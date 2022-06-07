@@ -7,49 +7,112 @@
 
 import SwiftUI
 
+
 struct GameBoardView: View {
-    
+    @State var buy:String = "0"
+    var gameName:GameNames
     @ObservedObject var gameBoard:GameBoard
-    @State var registerNames:Bool = true
+    @State var registerNames:Bool = false
+    @State var isNewGame:Bool = false
+    @State var isBuying:Bool = false
+    @State var degree:Angle = Angle(degrees: 0)
     
     
-    init(gameBoard:GameBoard){
-        self.gameBoard = gameBoard
-    
+    init(gameName: GameNames){
         
-        
-        gameBoard.namingPlayers(names: ["Ahmed", "Ali", "Jassim", "Hassan"], groupsNames: [])
-//        gameBoard.startShuffler(id: 1)
+        self.gameName = gameName
+            self.gameBoard = GameBoard(id: 1, gameName: gameName)
+            gameBoard.namingPlayers(names: Array.init(repeating: "Player", count: 4), groupsNames: [])
 
     }
-    
+
     var body: some View {
         VStack{
-            List(gameBoard.players) { player in
-                VStack {
-                    Text("Cuurent \(player.currentOrder)")
-                    HStack {
-                        Text("\(player.id)")
-                        Text(player.name)
-                        Text("Total \(player.total())")
-                        
-    //                    Text("\(player.playerID() == gameBoard.shufflerID)")
-                    }
-                  
-                }
+            ForEach(0 ..< gameBoard.players.count, id: \.self) { playerID in
+                PlayerCardView(player: $gameBoard.players[playerID], isBuying: $isBuying)
+//                VStack {
+////                    var buy:String = "0"
+//                    Text("Cuurent \(player.currentOrder)")
+////                    TextField(LocalizedStringKey("Buying"), text: $buy)
+////                        .onSubmit {
+////                        print("The buy is \(buy) and in Int \(Int(buy) ?? 2)")
+////
+////
+////                            player.newOrder(100)
+//////                            player.currentOrderInt += Int(buy)!
+////                            gameBoard.printPlayers()
+////                        }
+//                    HStack {
+////                        Text("\(player.id)")
+//
+//                        Text("Buy: \(player.theCurrentOrder())")
+//
+////                        Text("Bought: \(player.theCurrentOrder())")
+//                        Text(player.name)
+//                        Text("Total \(player.total())")
+//
+//    //                    Text("\(player.playerID() == gameBoard.shufflerID)")
+//                    }
+//
+//                }
                 .frame(maxWidth:.infinity)
                 .padding()
                 .overlay(
                     RoundedRectangle(cornerRadius: 8)
-                        .stroke(player.id == gameBoard.shufflerID ? Color.red : Color.black)
+                        .stroke(gameBoard.players[playerID].id == gameBoard.shufflerID ? Color.red : Color.black)
             )
                 
             }
+            
+            Spacer()
+            Button {
+//                withAnimation{
+                    gameBoard.shuffeler()
+//                }
+            } label: {
+//                switch(gameBoard.shufflerID)
+                
+                Image(systemName: "arrow.forward")
+                    .font(.largeTitle)
+                    .rotationEffect(Angle(degrees: Double(((gameBoard.shufflerID - 1) * -90))))
+            }
+            Spacer()
+            
+            Button {
+                isBuying.toggle()
+            } label: {
+                if isBuying{
+                    Text("Play")
+                }else{
+                    Text("Buy")
+                }
+            }
+
 
         }
-        .navigationTitle(gameBoard.gameName.rawValue)
-        .sheet(isPresented: $registerNames) {
+        .padding()
+        .onAppear(perform: {
+//            registerNames.toggle()
             
+        })
+        .navigationTitle(gameBoard.gameName.rawValue)
+        .sheet(isPresented: $registerNames, onDismiss: {
+            isBuying.toggle()
+        }, content: {
+            RegisterPlayersView(gameBoard: gameBoard)
+        })
+        
+        
+        .toolbar {
+            Button {
+                isNewGame.toggle()
+                gameBoard.newGame()
+                registerNames.toggle()
+                
+            } label: {
+                Text(LocalizedStringKey("New"))
+            }
+
         }
     }
 }
@@ -57,7 +120,7 @@ struct GameBoardView: View {
 struct GameBoardView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            GameBoardView(gameBoard: GameBoard(id: 1, gameName: GameNames.Tarnib))
+            GameBoardView(gameName: GameNames.Tarnib)
         }
     }
 }

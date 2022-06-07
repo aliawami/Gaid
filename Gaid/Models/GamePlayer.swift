@@ -17,6 +17,7 @@ final class GamePlayer: Player, Identifiable{
     
     private var teamName: String = ""
     
+    
     var finalScore:Int{
         get { return scores.reduce(0) { $0 + $1} }
     }
@@ -24,7 +25,9 @@ final class GamePlayer: Player, Identifiable{
     var scores =  [Int]()
     
     //Current order will be what the user order during the game
-    var currentOrder: Int
+    var currentOrder: Int = 0
+//    var currentOrderInt: Int = 0
+//     var currentString: String = "0"
     
     var isShuffeler: Bool = false
     
@@ -34,7 +37,7 @@ final class GamePlayer: Player, Identifiable{
         self.id = id
 //        self.name = "Player\(id)"
 //        self.teamName = team
-        currentOrder = 0
+//        currentOrder = 0
     }
     
     func playerID()->Int{
@@ -45,6 +48,11 @@ final class GamePlayer: Player, Identifiable{
     func newOrder(_ buying: Int){
         currentOrder = buying
     }
+    
+    func theCurrentOrder()->Int{
+        currentOrder
+    }
+    
     
     func lastOrder(isSuccess: Bool = true){
         if isSuccess{

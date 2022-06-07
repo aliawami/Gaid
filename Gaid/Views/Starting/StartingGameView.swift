@@ -11,16 +11,15 @@ struct StartingGameView: View {
     var body: some View {
         VStack {
             
-            ForEach(GameNames.allCases, id:\.self) { item in
+            ForEach(GameNames.allCases, id:\.self) { gameName in
                 NavigationLink {
-                    Text(item.rawValue)
+                    GameBoardView(gameName: gameName)
                 } label: {
-                    Text(LocalizedStringKey(item.rawValue))
+                    Text(LocalizedStringKey(gameName.rawValue))
                 }
                 .frame(maxWidth:.infinity)
                 .padding()
 
-                
             }
             
         }

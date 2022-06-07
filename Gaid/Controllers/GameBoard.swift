@@ -33,6 +33,13 @@ final class GameBoard:  ObservableObject, GamePlay{
         self.initialWinningScore = self.gameName.winningScore
     }
     
+    func newGame(){
+        id += 1
+        self.namingPlayers(names: Array.init(repeating: "Player", count: 4), groupsNames: [])
+        shufflerID = 0
+        
+    }
+    
     //Setting the players custom names
     //Placing each player to a group
 
@@ -40,6 +47,15 @@ final class GameBoard:  ObservableObject, GamePlay{
         if !groupsNames.isEmpty{
             groups = groupsNames
         }
+        print("The names")
+        for aName in names{
+            
+            print("name is \(aName)")
+        }
+        if !players.isEmpty{
+            players = []
+        }
+        if !names.isEmpty{
         for index in 0 ..< names.count{
             let newPlayer = GamePlayer(id: index+1)
             newPlayer.myName(names[index])
@@ -53,6 +69,13 @@ final class GameBoard:  ObservableObject, GamePlay{
             players.append(newPlayer)
         }
         self.startShuffler(id: 1)
+        }
+    }
+    
+    func printPlayers(){
+        for player in players {
+            print("\(player.name), current \(player.theCurrentOrder())")
+        }
     }
 
     
