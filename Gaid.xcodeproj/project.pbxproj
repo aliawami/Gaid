@@ -31,6 +31,7 @@
 		79D1EC21283EE8EC0041C2F7 /* GaidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC20283EE8EC0041C2F7 /* GaidTests.swift */; };
 		79D1EC2B283EE8EC0041C2F7 /* GaidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC2A283EE8EC0041C2F7 /* GaidUITests.swift */; };
 		79D1EC2D283EE8EC0041C2F7 /* GaidUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC2C283EE8EC0041C2F7 /* GaidUITestsLaunchTests.swift */; };
+		79F552A62850B6410020B2A2 /* BalootGameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F552A52850B6400020B2A2 /* BalootGameBoardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		79D1EC26283EE8EC0041C2F7 /* GaidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D1EC2A283EE8EC0041C2F7 /* GaidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaidUITests.swift; sourceTree = "<group>"; };
 		79D1EC2C283EE8EC0041C2F7 /* GaidUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaidUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		79F552A52850B6400020B2A2 /* BalootGameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalootGameBoardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			children = (
 				7941CA102841136B0062BB44 /* GameBoardView.swift */,
 				7941CA22284A73070062BB44 /* PlayerCardView.swift */,
+				79F552A52850B6400020B2A2 /* BalootGameBoardView.swift */,
 			);
 			path = GameBoard;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				799E9C43284BDE9200BA0F83 /* GameRules.swift in Sources */,
 				79D1EC17283EE8EC0041C2F7 /* Gaid.xcdatamodeld in Sources */,
 				7941CA05284012DC0062BB44 /* Player.swift in Sources */,
+				79F552A62850B6410020B2A2 /* BalootGameBoardView.swift in Sources */,
 				79D1EC0B283EE8E10041C2F7 /* GaidApp.swift in Sources */,
 				7941CA16284298D80062BB44 /* StartingGameView.swift in Sources */,
 				7941CA0F284019B70062BB44 /* ShufflingDelegate.swift in Sources */,

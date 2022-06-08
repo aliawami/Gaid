@@ -19,6 +19,7 @@ struct GameRules{
             print("divid\(toInt)")
             return toInt
         }
-        
     }
+    
+    
 }
