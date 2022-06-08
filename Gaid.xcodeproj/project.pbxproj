@@ -22,6 +22,9 @@
 		7941CA212842B8E60062BB44 /* RegisterPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941CA202842B8E60062BB44 /* RegisterPlayerView.swift */; };
 		7941CA23284A73080062BB44 /* PlayerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941CA22284A73070062BB44 /* PlayerCardView.swift */; };
 		799E9C43284BDE9200BA0F83 /* GameRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E9C42284BDE9200BA0F83 /* GameRules.swift */; };
+		799E9C45285137B600BA0F83 /* CurvedRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E9C44285137B600BA0F83 /* CurvedRectView.swift */; };
+		799E9C4728513A9800BA0F83 /* CurvedRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E9C4628513A9800BA0F83 /* CurvedRect.swift */; };
+		799E9C49285144E000BA0F83 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E9C48285144E000BA0F83 /* ColorExtension.swift */; };
 		79D1EC0B283EE8E10041C2F7 /* GaidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC0A283EE8E10041C2F7 /* GaidApp.swift */; };
 		79D1EC0D283EE8E10041C2F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC0C283EE8E10041C2F7 /* ContentView.swift */; };
 		79D1EC0F283EE8EB0041C2F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D1EC0E283EE8EB0041C2F7 /* Assets.xcassets */; };
@@ -67,6 +70,9 @@
 		7941CA202842B8E60062BB44 /* RegisterPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlayerView.swift; sourceTree = "<group>"; };
 		7941CA22284A73070062BB44 /* PlayerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardView.swift; sourceTree = "<group>"; };
 		799E9C42284BDE9200BA0F83 /* GameRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRules.swift; sourceTree = "<group>"; };
+		799E9C44285137B600BA0F83 /* CurvedRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectView.swift; sourceTree = "<group>"; };
+		799E9C4628513A9800BA0F83 /* CurvedRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRect.swift; sourceTree = "<group>"; };
+		799E9C48285144E000BA0F83 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		79D1EC07283EE8E10041C2F7 /* Gaid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gaid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D1EC0A283EE8E10041C2F7 /* GaidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaidApp.swift; sourceTree = "<group>"; };
 		79D1EC0C283EE8E10041C2F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 				7941CA1C2842AEE30062BB44 /* GameName.swift */,
 				7941CA1E2842B1830062BB44 /* TarnibBoardView.swift */,
 				7941CA202842B8E60062BB44 /* RegisterPlayerView.swift */,
+				799E9C44285137B600BA0F83 /* CurvedRectView.swift */,
+				799E9C4628513A9800BA0F83 /* CurvedRect.swift */,
+				799E9C48285144E000BA0F83 /* ColorExtension.swift */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -377,7 +386,9 @@
 			files = (
 				7941CA09284013720062BB44 /* GamePlayer.swift in Sources */,
 				7941CA0D284013AC0062BB44 /* GameBoard.swift in Sources */,
+				799E9C49285144E000BA0F83 /* ColorExtension.swift in Sources */,
 				79D1EC14283EE8EC0041C2F7 /* Persistence.swift in Sources */,
+				799E9C45285137B600BA0F83 /* CurvedRectView.swift in Sources */,
 				7941CA1F2842B1830062BB44 /* TarnibBoardView.swift in Sources */,
 				7941CA212842B8E60062BB44 /* RegisterPlayerView.swift in Sources */,
 				7941CA112841136B0062BB44 /* GameBoardView.swift in Sources */,
@@ -390,6 +401,7 @@
 				79D1EC17283EE8EC0041C2F7 /* Gaid.xcdatamodeld in Sources */,
 				7941CA05284012DC0062BB44 /* Player.swift in Sources */,
 				79F552A62850B6410020B2A2 /* BalootGameBoardView.swift in Sources */,
+				799E9C4728513A9800BA0F83 /* CurvedRect.swift in Sources */,
 				79D1EC0B283EE8E10041C2F7 /* GaidApp.swift in Sources */,
 				7941CA16284298D80062BB44 /* StartingGameView.swift in Sources */,
 				7941CA0F284019B70062BB44 /* ShufflingDelegate.swift in Sources */,
