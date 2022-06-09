@@ -7,9 +7,16 @@
 
 import SwiftUI
 
+var us = Array.init(repeating: "40", count: 9)
+
+
 struct BalootGameBoardView: View {
     @State var ourScore: String = "0"
     @State var theirScore: String = "0"
+    
+    @State var nextDealer:Int = 0
+    @State var degree:Angle = Angle(degrees: 0)
+    
     var body: some View {
         VStack {
             
@@ -20,10 +27,22 @@ struct BalootGameBoardView: View {
 //                        .padding()
                         .frame(width: 100)
                         .padding()
+                        
                 Spacer()
-                Image(systemName: "arrow.up")
-                    .padding()
-                    .font(.system(size: 24, weight: .medium, design: .monospaced))
+                Button {
+                    if nextDealer < 3{
+                        nextDealer += 1
+                    }else{
+                        nextDealer = 0
+                    }
+                } label: {
+                    Image(systemName: "arrow.up")
+                        .padding()
+                        .font(.system(size: 24, weight: .medium, design: .monospaced))
+                    .rotationEffect(Angle(degrees: Double(nextDealer) * -90))
+                }
+
+                
                     .overlay(Circle().stroke(Color.mySecondaryColor))
                     .padding()
                 Spacer()
@@ -35,31 +54,93 @@ struct BalootGameBoardView: View {
             }
             .padding(.vertical, 20)
             
-            HStack{
+            HStack(spacing:0){
                 TextField(LocalizedStringKey("0"), text: $ourScore)
-//                TextField(LocalizedStringKey("0"), text: $ourScore)
-                ZStack {
-                    Circle().fill(Color.mySecondaryColor)
+                    .multilineTextAlignment(.center)
+                    .padding(.vertical, 9)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8, style: RoundedCornerStyle.circular)
+                            .stroke()
+                    )
+                    .padding(.horizontal)
+
                     Text(LocalizedStringKey("Enter"))
                         .foregroundColor(.white)
-                        .font(.title2)
-//                        .padding()
-//                        .background(
+                        .font(.title)
+                
+                        .lineLimit(1)
+                        .padding(20)
+                        .background(Circle().fill(Color.mySecondaryColor))
+                        .overlay(
+                            Circle()
+                                .stroke(Color.highlightColor, lineWidth: 1)
                             
-//                    )
-//                    .padding()
-                }
-                .aspectRatio(1, contentMode: .fit)
+                        )
+                        .shadow(color: Color.lineColor.opacity(0.5), radius: 6, x: 0, y: 4)
+
                 TextField(LocalizedStringKey("0"), text: $theirScore)
+                    .multilineTextAlignment(.center)
+                    .padding(.vertical, 9)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 8, style: RoundedCornerStyle.circular)
+                            .stroke()
+                    )
+                    .padding(.horizontal)
             }
             
-            Spacer()
-//                        .aspectRatio(1 ,contentMode: .fit)
-//                        Spacer()
-//                        .frame(height: )
+            HStack{
+                VStack{
+                    Text("US")
+                        .font(.system(size: 24, weight: .medium, design: .rounded))
+                        .foregroundColor(Color.mySecondaryColor)
+                        .frame(maxWidth:.infinity)
+                    Rectangle()
+                        .fill(Color.lineColor)
+                        .frame(height:1)
+                        
+                    ForEach(Array(us.enumerated()), id:\.0){ _ , item in
+                        Text(item)
+                            .foregroundColor(.highlightColor)
+                            .padding(.vertical,6)
+                            .frame(maxWidth:.infinity)
+                        Divider()
+                    }
+                    Spacer()
+                }
+                .frame(maxHeight:.infinity)
+                Rectangle()
+                    .fill(Color.lineColor)
+                    .frame(width:1)
+                    .padding(.top)
+                
+                VStack{
+                    Text("Them")
+                        .font(.system(size: 24, weight: .medium, design: .rounded))
+                        .foregroundColor(Color.mySecondaryColor)
+                        .frame(maxWidth:.infinity)
+                    Rectangle()
+                        .fill(Color.lineColor)
+                        .frame(height:1)
+                    ForEach(Array(us.enumerated()), id:\.0){ _ , item in
+                        Text(item)
+                            .foregroundColor(.highlightColor)
+                            .padding(.vertical,6)
+                            .frame(maxWidth:.infinity)
+                        Divider()
+                    }
+                    Spacer()
+                }
+                .frame(maxHeight:.infinity)
+            }
+            .padding(.vertical)
+            
+//
+//            Spacer()
+
            
             
         }
+        .background(Color.myPrimaryColor)
     }
 }
 

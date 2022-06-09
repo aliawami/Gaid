@@ -14,7 +14,8 @@ struct GaidApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                StartingGameView()
+                BalootGameBoardView()
+//                StartingGameView()
             }
 //            RegisterPlayerView(gameBoard: GameBoard(id: 1, gameName: GameNames.Tarnib))
 //            ContentView()

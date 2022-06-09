@@ -18,4 +18,6 @@ extension Color{
     static let negativeColor = Color("negativeColor")
     
     static let highlightColor = Color("highlightColor")
+    
+    static let lineColor = Color("lineColor")
 }

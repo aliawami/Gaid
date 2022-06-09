@@ -14,21 +14,30 @@ struct CurvedRectView: View {
                 
                 let width: CGFloat = min(geometry.size.width / 2 , geometry.size.height / 2)
                 let height = geometry.size.height / 2
-//                let xScale: CGFloat = 0.832
-//                let xOffset = (width * (1.0 - xScale)) / 2.0
+                //                let xScale: CGFloat = 0.832
+                //                let xOffset = (width * (1.0 - xScale)) / 2.0
                 
-                path.move(to: CGPoint(x: 0, y: 0))
-                path.addLine(to:
-                CGPoint(x: width * 2, y: 0))
-                path.addCurve(to: CGPoint(x: width, y: height * 2), control1: CGPoint(x: width * 2, y: height * 1.45), control2: CGPoint(x: width * 2, y: height * 2))
-                path.addLine(to:
-                CGPoint(x: width * 2, y: height * 2))
-                path.addLine(to:
-                CGPoint(x: 0, y: height * 2))
+                path.move(to: CGPoint(x: width , y: 10))
+                path.addCurve(to: CGPoint(x: width , y: height),
+                              control1: CGPoint(x: width , y:  height / 4),
+                              control2: CGPoint(x: width * 2 , y: height ))
+                path.move(to: CGPoint(x: width , y: 10))
+                path.addCurve(to: CGPoint(x: width , y: height), control1: CGPoint(x: width, y: height / 4), control2: CGPoint(x: 0 , y: height))
+//                path.addCurve(to: CGPoint(x: width / 2, y: 10), control1: CGPoint(x: width / 2, y: height / 2),
+//                              control2: CGPoint(x: width , y: height ))
+                //                path.move(to: CGPoint(x: 0, y: 0))
+                //                path.addLine(to:
+                //                CGPoint(x: width * 2, y: 0))
+                //                path.addCurve(to: CGPoint(x: width, y: height * 2), control1: CGPoint(x: width * 2, y: height * 1.45), control2: CGPoint(x: width * 2, y: height * 2))
+                //                path.addLine(to:
+                //                CGPoint(x: width * 2, y: height * 2))
+                //                path.addLine(to:
+                //                CGPoint(x: 0, y: height * 2))
                 
                 
             }
-//            .fill(.blue)
+//            .stroke(style: StrokeStyle(lineWidth: 2, lineCap: CGLineCap.round, lineJoin: .round, dash: [1]))
+                        .fill(.blue)
         }
     }
 }
