@@ -13,10 +13,10 @@ struct GaidApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+//            NavigationView {
                 BalootGameBoardView()
 //                StartingGameView()
-            }
+//            }
 //            RegisterPlayerView(gameBoard: GameBoard(id: 1, gameName: GameNames.Tarnib))
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)

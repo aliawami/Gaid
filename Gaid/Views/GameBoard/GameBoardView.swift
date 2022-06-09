@@ -27,92 +27,96 @@ struct GameBoardView: View {
     }
 
     var body: some View {
-        VStack{
-            ForEach(0 ..< gameBoard.players.count, id: \.self) { playerID in
-                PlayerCardView(player: $gameBoard.players[playerID], isBuying: $isBuying)
-//                VStack {
-////                    var buy:String = "0"
-//                    Text("Cuurent \(player.currentOrder)")
-////                    TextField(LocalizedStringKey("Buying"), text: $buy)
-////                        .onSubmit {
-////                        print("The buy is \(buy) and in Int \(Int(buy) ?? 2)")
-////
-////
-////                            player.newOrder(100)
-//////                            player.currentOrderInt += Int(buy)!
-////                            gameBoard.printPlayers()
-////                        }
-//                    HStack {
-////                        Text("\(player.id)")
-//
-//                        Text("Buy: \(player.theCurrentOrder())")
-//
-////                        Text("Bought: \(player.theCurrentOrder())")
-//                        Text(player.name)
-//                        Text("Total \(player.total())")
-//
-//    //                    Text("\(player.playerID() == gameBoard.shufflerID)")
-//                    }
-//
-//                }
-                .frame(maxWidth:.infinity)
-                .padding()
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(gameBoard.players[playerID].id == gameBoard.shufflerID ? Color.red : Color.black)
-            )
+        VStack {
+//            ZStack(alignment: .center){
                 
-            }
-            
-            Spacer()
-            Button {
-//                withAnimation{
-                    gameBoard.shuffeler()
-//                }
-            } label: {
-//                switch(gameBoard.shufflerID)
                 
-                Image(systemName: "arrow.forward")
-                    .font(.largeTitle)
-                    .rotationEffect(Angle(degrees: Double(((gameBoard.shufflerID - 1) * -90))))
-            }
-            Spacer()
-            
-            Button {
-                isBuying.toggle()
-            } label: {
-                if isBuying{
-                    Text("Play")
-                }else{
-                    Text("Buy")
+                HStack{
+                    UserCardView()
+                    VStack{
+                        UserCardView()
+                        Button {
+                        //                withAnimation{
+                                            gameBoard.shuffeler()
+                        //                }
+                                    } label: {
+                        //                switch(gameBoard.shufflerID)
+                        
+                                        Image(systemName: "arrow.forward")
+                                            .font(.largeTitle)
+                                            .rotationEffect(Angle(degrees: Double(((gameBoard.shufflerID - 1) * -90))))
+                                    }
+                                    .padding()
+                        UserCardView()
+                    }
+                    UserCardView()
                 }
-            }
-
+//            }
+            .frame(height: 360)
+            
+            
+    //        VStack{
+    //            ForEach(0 ..< gameBoard.players.count, id: \.self) { playerID in
+    //                PlayerCardView(player: $gameBoard.players[playerID], isBuying: $isBuying)
+    //                .frame(maxWidth:.infinity)
+    //                .padding()
+    //                .overlay(
+    //                    RoundedRectangle(cornerRadius: 8)
+    //                        .stroke(gameBoard.players[playerID].id == gameBoard.shufflerID ? Color.red : Color.black)
+    //            )
+    //
+    //            }
+    //
+    //            Spacer()
+    //            Button {
+    ////                withAnimation{
+    //                    gameBoard.shuffeler()
+    ////                }
+    //            } label: {
+    ////                switch(gameBoard.shufflerID)
+    //
+    //                Image(systemName: "arrow.forward")
+    //                    .font(.largeTitle)
+    //                    .rotationEffect(Angle(degrees: Double(((gameBoard.shufflerID - 1) * -90))))
+    //            }
+    //            Spacer()
+    //
+    //            Button {
+    //                isBuying.toggle()
+    //            } label: {
+    //                if isBuying{
+    //                    Text("Play")
+    //                }else{
+    //                    Text("Buy")
+    //                }
+    //            }
+    //
+    //
+    //        }
+            .padding()
+            .onAppear(perform: {
+    //            registerNames.toggle()
+                
+            })
+            .navigationTitle(gameBoard.gameName.rawValue)
+            .sheet(isPresented: $registerNames, onDismiss: {
+                isBuying.toggle()
+            }, content: {
+                RegisterPlayersView(gameBoard: gameBoard)
+            })
+            
+            
+            .toolbar {
+                Button {
+                    isNewGame.toggle()
+                    gameBoard.newGame()
+                    registerNames.toggle()
+                    
+                } label: {
+                    Text(LocalizedStringKey("New"))
+                }
 
         }
-        .padding()
-        .onAppear(perform: {
-//            registerNames.toggle()
-            
-        })
-        .navigationTitle(gameBoard.gameName.rawValue)
-        .sheet(isPresented: $registerNames, onDismiss: {
-            isBuying.toggle()
-        }, content: {
-            RegisterPlayersView(gameBoard: gameBoard)
-        })
-        
-        
-        .toolbar {
-            Button {
-                isNewGame.toggle()
-                gameBoard.newGame()
-                registerNames.toggle()
-                
-            } label: {
-                Text(LocalizedStringKey("New"))
-            }
-
         }
     }
 }

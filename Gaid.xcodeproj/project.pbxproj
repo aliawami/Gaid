@@ -35,6 +35,7 @@
 		79D1EC2B283EE8EC0041C2F7 /* GaidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC2A283EE8EC0041C2F7 /* GaidUITests.swift */; };
 		79D1EC2D283EE8EC0041C2F7 /* GaidUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D1EC2C283EE8EC0041C2F7 /* GaidUITestsLaunchTests.swift */; };
 		79F552A62850B6410020B2A2 /* BalootGameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F552A52850B6400020B2A2 /* BalootGameBoardView.swift */; };
+		79F552A8285211FF0020B2A2 /* UserCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F552A7285211FF0020B2A2 /* UserCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		79D1EC2A283EE8EC0041C2F7 /* GaidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaidUITests.swift; sourceTree = "<group>"; };
 		79D1EC2C283EE8EC0041C2F7 /* GaidUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaidUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		79F552A52850B6400020B2A2 /* BalootGameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalootGameBoardView.swift; sourceTree = "<group>"; };
+		79F552A7285211FF0020B2A2 /* UserCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				7941CA102841136B0062BB44 /* GameBoardView.swift */,
 				7941CA22284A73070062BB44 /* PlayerCardView.swift */,
 				79F552A52850B6400020B2A2 /* BalootGameBoardView.swift */,
+				79F552A7285211FF0020B2A2 /* UserCardView.swift */,
 			);
 			path = GameBoard;
 			sourceTree = "<group>";
@@ -393,6 +396,7 @@
 				7941CA212842B8E60062BB44 /* RegisterPlayerView.swift in Sources */,
 				7941CA112841136B0062BB44 /* GameBoardView.swift in Sources */,
 				7941CA132841179E0062BB44 /* RegisterPlayersView.swift in Sources */,
+				79F552A8285211FF0020B2A2 /* UserCardView.swift in Sources */,
 				7941CA1D2842AEE30062BB44 /* GameName.swift in Sources */,
 				7941CA1928429C0C0062BB44 /* StartingGameSettingsView.swift in Sources */,
 				7941CA23284A73080062BB44 /* PlayerCardView.swift in Sources */,
