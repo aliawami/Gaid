@@ -16,6 +16,7 @@ struct GameBoardView: View {
     @State var isNewGame:Bool = false
     @State var isBuying:Bool = false
     @State var degree:Angle = Angle(degrees: 0)
+    @State var userBuy:String = ""
     
     
     init(gameName: GameNames){
@@ -29,31 +30,68 @@ struct GameBoardView: View {
     var body: some View {
         VStack {
 //            ZStack(alignment: .center){
-                
-                
-                HStack{
-                    UserCardView()
+//            Spacer()
+            HStack{
+                ForEach(Array(gameBoard.players.enumerated()), id: \.0){ index,  player in
                     VStack{
-                        UserCardView()
-                        Button {
-                        //                withAnimation{
-                                            gameBoard.shuffeler()
-                        //                }
-                                    } label: {
-                        //                switch(gameBoard.shufflerID)
-                        
-                                        Image(systemName: "arrow.forward")
-                                            .font(.largeTitle)
-                                            .rotationEffect(Angle(degrees: Double(((gameBoard.shufflerID - 1) * -90))))
-                                    }
-                                    .padding()
-                        UserCardView()
+                        UserCardView(gameName: self.gameName, player: $gameBoard.players[index])
+                        Spacer()
+                        TextField(LocalizedStringKey("0"), text: $userBuy)
+                            .padding()
                     }
-                    UserCardView()
+//                    VStack{
+//                        UserCardView(gameName: self.gameName)
+//                        Spacer()
+//                        TextField(LocalizedStringKey("0"), text: $userBuy)
+//                            .padding()
+//                    }
+//                    VStack{
+//                        UserCardView(gameName: self.gameName)
+//                        Spacer()
+//                        TextField(LocalizedStringKey("0"), text: $userBuy)
+//                            .padding()
+//                    }
+//                    VStack{
+//                        UserCardView(gameName: self.gameName)
+//                        Spacer()
+//                        TextField(LocalizedStringKey("0"), text: $userBuy)
+//                            .padding()
+//                    }
                 }
-//            }
-            .frame(height: 360)
-            
+//                UserCardView()
+//                UserCardView()
+//                UserCardView()
+            }
+//            .fixedSize(horizontal: false, vertical: true)
+                
+//            HStack(spacing: 40){
+//                    UserCardView()
+//                    VStack(spacing: 30){
+//                        UserCardView()
+//                        Button {
+//                        //                withAnimation{
+//                                            gameBoard.shuffeler()
+//                        //                }
+//                                    } label: {
+//                        //                switch(gameBoard.shufflerID)
+//
+//                                        Image(systemName: "arrow.up")
+//                                            .padding()
+//                                            .font(.system(size: 24, weight: .medium, design: .monospaced))
+//                                            .rotationEffect(Angle(degrees: Double(((gameBoard.shufflerID - 1) * -90))))
+//                                    }
+//                                    .padding()
+//                                    .overlay(Circle().stroke(Color.mySecondaryColor))
+////                                    .padding()
+//                        UserCardView()
+//                    }
+//                    UserCardView()
+//                }
+//
+//
+////            }
+//            .frame(height: 550)
+//
             
     //        VStack{
     //            ForEach(0 ..< gameBoard.players.count, id: \.self) { playerID in

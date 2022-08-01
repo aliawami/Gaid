@@ -21,6 +21,8 @@
 		7941CA1F2842B1830062BB44 /* TarnibBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941CA1E2842B1830062BB44 /* TarnibBoardView.swift */; };
 		7941CA212842B8E60062BB44 /* RegisterPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941CA202842B8E60062BB44 /* RegisterPlayerView.swift */; };
 		7941CA23284A73080062BB44 /* PlayerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7941CA22284A73070062BB44 /* PlayerCardView.swift */; };
+		7996C5C528664C2E005CC688 /* BalootGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7996C5C428664C2E005CC688 /* BalootGameController.swift */; };
+		7996C5C728665752005CC688 /* PlayerHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7996C5C628665752005CC688 /* PlayerHistoryList.swift */; };
 		799E9C43284BDE9200BA0F83 /* GameRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E9C42284BDE9200BA0F83 /* GameRules.swift */; };
 		799E9C45285137B600BA0F83 /* CurvedRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E9C44285137B600BA0F83 /* CurvedRectView.swift */; };
 		799E9C4728513A9800BA0F83 /* CurvedRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E9C4628513A9800BA0F83 /* CurvedRect.swift */; };
@@ -70,6 +72,8 @@
 		7941CA1E2842B1830062BB44 /* TarnibBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarnibBoardView.swift; sourceTree = "<group>"; };
 		7941CA202842B8E60062BB44 /* RegisterPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPlayerView.swift; sourceTree = "<group>"; };
 		7941CA22284A73070062BB44 /* PlayerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardView.swift; sourceTree = "<group>"; };
+		7996C5C428664C2E005CC688 /* BalootGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalootGameController.swift; sourceTree = "<group>"; };
+		7996C5C628665752005CC688 /* PlayerHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerHistoryList.swift; sourceTree = "<group>"; };
 		799E9C42284BDE9200BA0F83 /* GameRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRules.swift; sourceTree = "<group>"; };
 		799E9C44285137B600BA0F83 /* CurvedRectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRectView.swift; sourceTree = "<group>"; };
 		799E9C4628513A9800BA0F83 /* CurvedRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurvedRect.swift; sourceTree = "<group>"; };
@@ -136,7 +140,6 @@
 			children = (
 				7941CA102841136B0062BB44 /* GameBoardView.swift */,
 				7941CA22284A73070062BB44 /* PlayerCardView.swift */,
-				79F552A52850B6400020B2A2 /* BalootGameBoardView.swift */,
 				79F552A7285211FF0020B2A2 /* UserCardView.swift */,
 			);
 			path = GameBoard;
@@ -155,9 +158,19 @@
 			path = Additions;
 			sourceTree = "<group>";
 		};
+		7996C5C328664ADC005CC688 /* Baloot */ = {
+			isa = PBXGroup;
+			children = (
+				79F552A52850B6400020B2A2 /* BalootGameBoardView.swift */,
+				7996C5C428664C2E005CC688 /* BalootGameController.swift */,
+			);
+			path = Baloot;
+			sourceTree = "<group>";
+		};
 		79D1EBFE283EE8E10041C2F7 = {
 			isa = PBXGroup;
 			children = (
+				7996C5C628665752005CC688 /* PlayerHistoryList.swift */,
 				79D1EC09283EE8E10041C2F7 /* Gaid */,
 				79D1EC1F283EE8EC0041C2F7 /* GaidTests */,
 				79D1EC29283EE8EC0041C2F7 /* GaidUITests */,
@@ -241,6 +254,7 @@
 		79D1EC3B283EE9510041C2F7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7996C5C328664ADC005CC688 /* Baloot */,
 				7941CA1A28429E030062BB44 /* GameBoard */,
 				7941CA1728429BF40062BB44 /* GameSittings */,
 				7941CA14284298A30062BB44 /* Starting */,
@@ -392,6 +406,7 @@
 				799E9C49285144E000BA0F83 /* ColorExtension.swift in Sources */,
 				79D1EC14283EE8EC0041C2F7 /* Persistence.swift in Sources */,
 				799E9C45285137B600BA0F83 /* CurvedRectView.swift in Sources */,
+				7996C5C728665752005CC688 /* PlayerHistoryList.swift in Sources */,
 				7941CA1F2842B1830062BB44 /* TarnibBoardView.swift in Sources */,
 				7941CA212842B8E60062BB44 /* RegisterPlayerView.swift in Sources */,
 				7941CA112841136B0062BB44 /* GameBoardView.swift in Sources */,
@@ -401,6 +416,7 @@
 				7941CA1928429C0C0062BB44 /* StartingGameSettingsView.swift in Sources */,
 				7941CA23284A73080062BB44 /* PlayerCardView.swift in Sources */,
 				79D1EC0D283EE8E10041C2F7 /* ContentView.swift in Sources */,
+				7996C5C528664C2E005CC688 /* BalootGameController.swift in Sources */,
 				799E9C43284BDE9200BA0F83 /* GameRules.swift in Sources */,
 				79D1EC17283EE8EC0041C2F7 /* Gaid.xcdatamodeld in Sources */,
 				7941CA05284012DC0062BB44 /* Player.swift in Sources */,
